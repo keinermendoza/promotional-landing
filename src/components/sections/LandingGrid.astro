@@ -1,0 +1,154 @@
+---
+import Wrapper from "@layouts/Wrapper.astro";
+import Image from "astro/components/Image.astro";
+import Buisness from "@assets/busines-man.png";
+import Me from "@assets/me.png";
+import CardUp from "@components/CardUp.astro";
+
+---
+<section >
+    <Wrapper hasPadding={true}>
+        <h2 class="text-center text-5xl my-4 mb-6 md:mb-8">Tu Landing Page</h2>
+        <div class="grid-parent">
+            <div class="col1 bg-slate-300 rounded-lg shadow-md shadow-slate-400 p-5">
+                <CardUp
+                    title="Lista en 1 Semana"
+                    content="Tu Landing Page estara lista en solo una semana"
+                />
+            </div>
+            
+            <div class="col2 flex flex-col-reverse sm:flex-row  gap-4  bg-slate-300 rounded-lg shadow-md shadow-slate-400 p-5 pb-0">
+                <div class="w-2/3 mx-auto sm:m-0 sm:min-w-1/2 flex flex-col justify-end h-full">
+                    <Image class="w-full" src={Buisness} alt="hombre de negocios" />
+                </div>
+                <CardUp
+                title="Presencia Profesional"
+                content="Presenta tus productos y servicios de forma sólida y confiable."
+                bottomPosition="-bottom-4 sm:bottom-4"
+                />
+                
+            </div>
+            <div class="col3 bg-slate-300 rounded-lg shadow-md shadow-slate-400 p-5">
+                <CardUp
+                title="Precio Accessible"
+                content="El servicio de creación de landing page es de solo R$ 400  y de R$ 200 si aprovechas la promoción."
+            />
+            </div>
+            <div class="col4 bg-slate-300 rounded-lg shadow-md shadow-slate-400 p-5">
+                <CardUp
+                title="Mayor Conversion"
+                content="diseñada para guiar a los visitantes hacia una acción específica."
+                />
+            </div>
+            <div class="col5 bg-slate-300 rounded-lg shadow-md shadow-slate-400 p-5">
+                <CardUp
+                title="Tu estilo"
+                content="Tu Landing Page reflejará tu estilo y el de tu negocio, ayudando a reforzar el sentido de marca."
+                />
+            </div>
+
+            <div class="col6 flex flex-col sm:flex-row  gap-4 bg-slate-300 rounded-lg shadow-md shadow-slate-400 p-5 pb-0">
+                <CardUp
+                title="Soporte Personalizado"
+                content="Yo mismo estaré a tu disposición para brindarte el soporte necesario."
+                bottomPosition="-bottom-4 sm:bottom-4"
+                
+                />
+
+                <div class="w-2/3 mx-auto sm:m-0 sm:min-w-1/2  flex flex-col justify-end h-full">
+                    <Image class="w-full" src={Me} alt="desarrollador web" />
+                </div>
+                
+            </div>
+        </div>
+    </Wrapper> 
+</section>
+
+<style>
+.grid-parent {
+    display: grid;
+    gap: 0.75rem;
+    grid-auto-rows: minmax(300px, auto);
+}
+
+@media (min-width: 40rem) and (max-width: 64rem) {
+
+    .grid-parent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+        
+
+    .col2 {
+        grid-column: span 2 / span 2;
+    }
+
+    .col3 {
+        grid-column-start: 3;
+        grid-row-start: 2;
+    }
+
+    .col4 {
+        grid-column-start: 1;
+        grid-row-start: 3;
+    }
+
+    .col5 {
+        grid-column-start: 3;
+        grid-row-start: 3;
+    }
+
+    .col6 {
+        grid-column: span 2 / span 2;
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+} 
+
+
+
+@media (min-width: 64rem) {
+
+    .grid-parent {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .col2 {
+        grid-column: span 2 / span 2;
+    }
+
+    .col3 {
+        grid-column-start: 4;
+    }
+
+    .col4 {
+        grid-row-start: 2;
+    }
+
+    .col5 {
+        grid-row-start: 2;
+    }
+
+    .col6 {
+        grid-column: span 2 / span 2;
+        grid-row-start: 2;
+    }
+}
+</style>
+
+<script>
+    const cards = Array.from(document.querySelectorAll('.card-up__wrapper'));
+    cards.forEach(cardWrapper => {
+        const card = cardWrapper.querySelector('.card-up');
+        const toogleBtn = cardWrapper.querySelector('.card-up__toogle');
+
+        if(toogleBtn && card) {
+            toogleBtn.addEventListener('click', function (e) {
+                card.classList.toggle("active");
+                toogleBtn.classList.toggle("active");
+            })
+        } 
+    })
+</script>

@@ -1,0 +1,94 @@
+---
+import Promotion from "@assets/promotion-ready.png" 
+import { Image } from 'astro:assets';
+import PrimaryButton from "@components/PrimaryButton.astro";
+import Wrapper from "@layouts/Wrapper.astro";
+---
+<script is:inline src="/finisher-header.es5.min.js"></script>
+
+<section class="overflow-hidden relative text-white w-full min-h-[700px]">
+    <div  class="finisher-header">
+    <Wrapper>
+        <svg class="top-0 -left-28 sm:left-0 sm:right-0 sm:mx-auto absolute md:hidden" id="blob-mobile" width="700" height="528" viewBox="0 0 375 528" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M201.198 16.2527C262.026 21.2247 327.04 -7.13744 376.929 27.9961C432.901 67.4123 475.051 135.639 467.27 203.627C459.852 268.443 382.495 292.963 340.855 343.204C290.222 404.295 278.947 508.69 201.198 524.657C120.266 541.278 44.4549 476.885 -10.6983 415.401C-62.7767 357.345 -87.6838 281.593 -86.779 203.627C-85.8856 126.646 -70.3947 38.7122 -5.83938 -3.2912C54.5522 -42.5855 129.375 10.382 201.198 16.2527Z" fill="#00094A" fill-opacity="0.8"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M64.6255 42.3756C133.201 16.3421 197.82 -49.309 265.959 -22.9664C334.682 3.60211 344.599 92.3779 370.959 160.805C397.048 228.53 440.913 297.162 415.598 365.483C389.426 436.121 319.932 492.77 244.766 501.392C177.794 509.074 139.353 429.951 77.2859 404.29C13.1165 377.761 -74.3675 406.996 -116.407 352.071C-163.582 290.437 -172.986 196.057 -133.63 128.729C-95.9424 64.2569 -5.43085 68.971 64.6255 42.3756Z" fill="#00094A" fill-opacity="0.7"/>
+        </svg>
+        
+        <div class="relative text-center p-4 z-10 flex flex-col min-h-[700px] justify-between items-center md:items-start md:py-32 md:px-10 md:text-start">
+            <div>
+                <p class="title text-6xl mb-4">Gran Oferta!</p>    
+                <h1 class="text-2xl md:text-4xl mb-8 max-w-sm">Creación de sitio web personalizado</h1>
+                <p class="text-base mb-4">Precio especial por tiempo limitado. Obten tu sitio web a partir de: </p>
+                
+                <div class="flex justify-center md:mt-10 md:justify-start items-center gap-4">
+                    <p class="flex items-center gap-1">
+                        <span class="title text-6xl">200</span>
+                        <span class="text-2xl">R$</span>
+                    </p>
+                    <p class="text-xl text-decoration-line text-red-400">400 R$</p>
+                </div>
+            </div>
+
+            <PrimaryButton>
+                <svg width="33" height="34" viewBox="0 0 33 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M28.0574 5.29531C24.971 2.20156 20.8607 0.5 16.4926 0.5C7.47656 0.5 0.139955 7.83661 0.139955 16.8527C0.139955 19.7328 0.891295 22.5467 2.32031 25.029L0 33.5L8.66987 31.2239C11.0565 32.5277 13.7451 33.2127 16.4853 33.2127H16.4926C25.5013 33.2127 33 25.8761 33 16.86C33 12.492 31.1437 8.38906 28.0574 5.29531ZM16.4926 30.4578C14.0471 30.4578 11.6531 29.8022 9.56853 28.5647L9.075 28.2701L3.93348 29.6181L5.30357 24.6018L4.97946 24.0862C3.61674 21.9205 2.90223 19.4234 2.90223 16.8527C2.90223 9.36138 9.00134 3.26228 16.5 3.26228C20.1315 3.26228 23.542 4.67656 26.1054 7.24732C28.6687 9.81808 30.2451 13.2286 30.2377 16.86C30.2377 24.3587 23.9839 30.4578 16.4926 30.4578ZM23.9471 20.2779C23.542 20.0717 21.531 19.0846 21.1554 18.952C20.7797 18.8121 20.5071 18.7458 20.2346 19.1583C19.9621 19.5708 19.1813 20.4842 18.9382 20.7641C18.7025 21.0366 18.4594 21.0734 18.0542 20.8672C15.6529 19.6665 14.0766 18.7237 12.4929 16.0056C12.073 15.2837 12.9127 15.3353 13.6935 13.7737C13.8261 13.5011 13.7598 13.2654 13.6567 13.0592C13.5536 12.8529 12.7359 10.842 12.3971 10.0243C12.0656 9.22879 11.7268 9.33929 11.4763 9.32455C11.2406 9.30982 10.9681 9.30982 10.6955 9.30982C10.423 9.30982 9.98103 9.41295 9.60536 9.81808C9.22969 10.2306 8.17634 11.2176 8.17634 13.2286C8.17634 15.2395 9.64219 17.1842 9.84107 17.4567C10.0473 17.7292 12.7212 21.8542 16.8241 23.6295C19.417 24.7491 20.4335 24.8449 21.7299 24.6533C22.5181 24.5355 24.146 23.6663 24.4848 22.7087C24.8237 21.7511 24.8237 20.9335 24.7205 20.7641C24.6248 20.5799 24.3522 20.4768 23.9471 20.2779Z" fill="#000633"/>
+                </svg>
+                <span class="font-bold  text-2zxl">Reclamar Oferta</span>
+            </PrimaryButton> 
+    </div>
+
+        <svg class="absolute -left-[500px] top-0 hidden md:block" id="blob-desktop" width="1500" height="796" viewBox="0 0 783 796" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M317.795 100.098C423.778 108.756 537.055 59.3694 623.98 120.547C721.501 189.182 794.942 307.984 781.384 426.37C768.459 539.233 633.677 581.929 561.125 669.413C472.905 775.79 453.261 957.572 317.795 985.375C176.785 1014.32 44.6958 902.19 -51.4 795.129C-142.138 694.038 -185.535 562.131 -183.959 426.37C-182.402 292.324 -155.412 139.207 -42.9341 66.0668C62.2887 -2.35573 192.656 89.8757 317.795 100.098Z" fill="#00094A" fill-opacity="0.8"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M73.9656 49.4322C205.59 -0.536226 329.619 -126.547 460.405 -75.9849C592.312 -24.9894 611.347 145.406 661.941 276.746C712.017 406.737 796.21 538.468 747.622 669.603C697.386 805.186 564.001 913.917 419.726 930.466C291.182 945.211 217.398 793.343 98.266 744.09C-24.9006 693.169 -192.817 749.282 -273.507 643.861C-364.055 525.561 -382.105 344.408 -306.565 215.179C-234.228 91.4311 -60.5002 100.479 73.9656 49.4322Z" fill="#00094A" fill-opacity="0.7"/>
+        </svg>
+
+        <Image class="absolute max-w-[390px] bottom-0 left-0 right-0 mx-auto w-[90%] md:max-w-[420px]  md:left-auto md:m-0 md:right-24" src={Promotion} alt="Anunciando promocion imperdible" />
+    </Wrapper> 
+</div>
+
+      
+</section>
+
+<style>
+    .finisher {
+      width: 100%;
+    }
+
+  </style>
+<script type="text/javascript">
+    new FinisherHeader({
+      "count": 100,
+      "size": {
+        "min": 2,
+        "max": 18,
+        "pulse": 0
+      },
+      "speed": {
+        "x": {
+          "min": 0,
+          "max": 0.4
+        },
+        "y": {
+          "min": 0,
+          "max": 0.6
+        }
+      },
+      "colors": {
+        "background": "#19c2f8",
+        "particles": [
+          "#fbfcca",
+          "#d7f3fe",
+          "#ffd0a7"
+        ]
+      },
+      "blending": "overlay",
+      "opacity": {
+        "center": 1,
+        "edge": 0
+      },
+      "skew": 0,
+      "shapes": [
+        "c"
+      ]
+    });
+    </script>
