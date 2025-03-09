@@ -39,3 +39,9 @@ h2, h3 {
 .text-decoration-line {
     text-decoration-line: line-through;
 }
+
+@theme {
+  --color-action-yellow: #FFCA18;
+  --color-action-yellow-dark: #D2A614;
+  --color-blue-dark: hsl(227, 98%, 12%);
+}
