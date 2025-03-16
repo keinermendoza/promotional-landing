@@ -27,6 +27,16 @@ import "../styles/global.css";
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="https://promotional-landing.keinermendoza.com">
 		<title>Creación de Sitio Web</title>
+
+		<!-- Google tag (gtag.js) -->
+		<script is:inline src="https://www.googletagmanager.com/gtag/js?id=G-0CEXQGRW6T"></script>
+		<script is:inline>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-0CEXQGRW6T');
+		</script>
 	</head>
 	<body class="text-blue-dark bg-gray-100">
 		<slot />
